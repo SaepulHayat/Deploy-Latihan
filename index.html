@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site metas -->
+    <title>Saepul Hayat</title>
+    <meta name="keywords" content="blockchain, cryptocurrency, smart contracts, bitcoin">
+    <!-- fevicon -->
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Rubik+Scribble&display=swap"
+        rel="stylesheet">
+    <!-- import icons soscial media -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="">
+                <h1>aepul Hayat</h1>
+            </a>
+        </div>
+        <!-- Navigations  -->
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#registration">REGISTRATION</a></li>
+                <li><a href="#services">SERVICE</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- Hero Section -->
+    <section class="hero"></section>
+    <section id="home" class="home">
+        <div class="home-info">
+            <h1>Saepul Hayat</h1>
+            <h2>I'm a Frontend Developer</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione iure culpa modi molestiae, repellat eos, eius vel soluta dignissimos sed porro veniam consectetur enim est, sit beatae quae! Nostrum, architecto!</p>
+            <div class="btn-scm">
+                <a href="#" class="btn-primary">Download CV</a>
+                <!-- add button link social media -->
+                <div class="scm">
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <div class="profile"></div>
+        </div>
+    </section>
+    
+    <main>
+
+    <!-- Video Section -->
+    <section id="about" class="video-section">
+        <h2>Introduction</h2>
+        <video controls>
+            <source src="videos/btc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Product Reviews</h3>
+                    <p>In-depth and unbiased reviews of the latest tech products in the market.</p>
+                </div>
+                <div class="card">
+                    <h3>Tech News</h3>
+                    <p>Stay ahead of the curve with daily updates on the hottest tech trends.</p>
+                </div>
+                <div class="card">
+                    <h3>Gadget Comparisons</h3>
+                    <p>Find out which gadget is best suited to your needs through detailed comparisons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <aside class="table-section">
+        <h2>Paket Layanan</h2>
+        <table class="crypto-table">
+            <thead>
+                <tr>
+                    <th>Layanan</th>
+                    <th>Harga</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Analisis Pasar Crypto</td>
+                    <td>Rp1.500.000</td>
+                    <td>Analisis mendalam tren pasar kripto terbaru</td>
+                </tr>
+                <tr>
+                    <td>Langganan Berita Crypto</td>
+                    <td>Rp750.000</td>
+                    <td>Update harian mengenai perkembangan dunia kripto</td>
+                </tr>
+                <tr>
+                    <td>Perbandingan Aset Kripto</td>
+                    <td>Rp1.000.000</td>
+                    <td>Analisis komparatif berbagai aset kripto</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+
+
+<!-- Registrations sections -->
+<article " class="content">
+    <h2 id="registration">Registrasi</h2>
+    <div class="form-container">
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="dob">Tanggal Lahir</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender">
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tulis pesan..."></textarea>
+            </div>
+
+            <!-- Radio button untuk Status Pekerjaan -->
+            <div class="form-group">
+                <label>Status Pekerjaan</label>
+                <div class="radio-group">
+                    <input type="radio" id="pelajar" name="job_status" value="Pelajar">
+                    <label for="pelajar">Pelajar</label>
+                    <input type="radio" id="karyawan" name="job_status" value="Karyawan">
+                    <label for="karyawan">Karyawan</label>
+                    <input type="radio" id="pengusaha" name="job_status" value="Pengusaha">
+                    <label for="pengusaha">Pengusaha</label>
+                    <input type="radio" id="lainnya" name="job_status" value="Lainnya">
+                    <label for="lainnya">Lainnya</label>
+                </div>
+            </div>
+
+
+            <!-- Checkbox Persetujuan -->
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">Saya menyetujui syarat dan ketentuan</label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Kirim Formulir">
+            </div>
+        </form>
+    </div>
+</article>
+
+
+</main>
+
+<!-- Footer -->
+<footer >
+    <section id="contact" class="contact">
+        <p>Hubungi Kami di: <a href="tel:085715524122">085715524122</a> atau <a
+                href="mailto:ifnfajingga.com">disiniSuka_blockchain.com</a></p>
+    </section>
+    <p>&copy; 2024 Adoy Zola. All rights reserved.</p>
+</footer>
+</body>
+</html>
