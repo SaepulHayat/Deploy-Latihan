@@ -16,7 +16,6 @@ Kunjungi website yang sudah di-deploy melalui tautan berikut:
 [Website Saepul Hayat](https://##)
 
 ---
----
 
 ## Tentang Saya
 Sebagai seorang pengembang frontend, saya memiliki ketertarikan kuat pada teknologi blockchain dan cryptocurrency. Website ini menampilkan hasil karya dan layanan yang saya tawarkan.
@@ -24,7 +23,7 @@ Sebagai seorang pengembang frontend, saya memiliki ketertarikan kuat pada teknol
 ---
 
 ## Fitur
-Berikut adalah beberapa fitur yang tersedia:
+Berikut adalah beberapa fitur yang tersedia di sini:
 - **Navigasi Sederhana** : Memungkinkan pengguna menjelajah dengan mudah.
 - **Tombol Hamburger** : Ada fitur tambahan tombol hamburger dan tampilan yang resvonsif dan sederhana.
 - **Hero Section** : Menarik perhatian dengan gambar besar dan tombol ajakan bertindak.
