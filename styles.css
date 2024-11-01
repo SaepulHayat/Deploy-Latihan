@@ -7,8 +7,10 @@
 }
 
 body {
-    height: 100%;
-    background-color: #c4b8c2;
+    height: auto;
+    background: linear-gradient(to bottom, #24f815 20%, #4b0082 50%, #24f815 100%);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,12 +25,13 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: #efbbf1;
+    background:linear-gradient(to bottom, #24f815 0%,#340556 50%,#20ff11 100%);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10px;
+    box-shadow: 0 0 10px #8c259e;
     z-index: 100;
 
 }
@@ -82,7 +85,6 @@ header nav ul li a:hover{
 }
 
 
-
 /* section Hero */
 .hero {
     display: flex;
@@ -91,19 +93,18 @@ header nav ul li a:hover{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    height: 730px;
+    z-index: 1;
     
 }
 /* home info */
 .home{
     display: flex;
+    justify-content: center;
     text-align: left;
     color: #fff;
-    position: relative;
-    height: auto;
-    width: auto;
     padding: 180px 500px 5px 145px;
     z-index: 10;
 }
@@ -177,17 +178,145 @@ header nav ul li a:hover{
 
 /* Main Content Styling */
 main {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    justify-content: center;
     padding: 20px 0;
-    color: #333;
+    color: #000000;
+    z-index: 10;
+}
+
+/* Registrations */
+.content {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.content h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {margin-left: 1rem;
+    width: 50%;
+    background-color: rgba(219, 210, 239, 0.5);;
+    padding: 30px;
+    border-color: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Submit Button */
+.form-group input[type="submit"] {
+    background-color: rgba(98, 57, 185, 0.2);
+    padding: 5px 8px;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: rgba(245, 245, 245, 0.7);
+    color: #000000;
+    width: auto;
+    font-weight: 500;
+    transition: 0.5s;
+    border: hidden;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid grey;
+}
+
+/* Grup Radio */
+.radio-group {
+    display: flex;
+    text-align: center;
+    gap: 22px;
+}
+
+.radio-group label {
+    text-align: center;
+    margin-top: 6px;
+    margin-left: -10px;
+}
+
+/* Grup Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    accent-color: #000000;
+    
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    padding-top: 5px;
+    cursor: pointer;
+    font-weight: normal;
+    color: #000000;
+}
+
+.txt-black{
+    color: #000000;
+}
+
+.link-syarat{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-syarat:hover a{
+    color: darkblue;
 }
 
 /* Video Section */
 .video-section {
     text-align: center;
     margin-bottom: 40px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 .video-section h2 {
@@ -197,7 +326,7 @@ main {
 
 .video-section video {
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     border-radius: 8px;
 }
 
@@ -213,30 +342,69 @@ main {
 }
 
 .service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 15px;
+    display: grid;
+    /* Dua kolom di atas */
+    grid-template-columns: 1fr 1fr;
+    /* Dua baris: baris atas untuk 2 card dan baris bawah untuk 1 card */
+    grid-template-rows: auto auto;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .card {
-    flex: 1 1 300px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dua kolom: gambar dan teks */
+    grid-template-rows: auto 1fr; /* Judul di atas, konten di bawah */
+    gap: 10px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-    background-color: #f9f9f9;
+    background-color: rgba(236, 247, 233, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mengatur ukuran dan posisi setiap card */
+.card:nth-child(1),
+.card:nth-child(2) {
+    height: 50vh;
+}
+
+.card:nth-child(3) {
+    grid-column:1 / span 2; /* Memperluas card ketiga agar memenuhi dua kolom */
+    height: 50vh;
+    padding-bottom: 20px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
-    color: #007bff;
+    grid-column: 1 / -1; /* Membentang di seluruh kolom */
+    text-align: center;
+    margin-bottom: 5px;
+    color: #fff;
 }
 
+.image-info{
+    align-self: center;
+}
+
+.image-info img{
+    width: 100%;
+    height: 10rem;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+.card p{
+    padding: 7px;
+    text-align: left;
+}
+
+
 .card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(236, 247, 233, 0.4);
+    transition: 0.5s ease;
 }
 
 /* Styling untuk Section Tabel */
@@ -270,19 +438,19 @@ main {
 }
 
 .crypto-table th {
-    background-color: #27292e;
+    background-color: #d60dcf;
     font-weight: bold;
-    color: #00cc99;
+    color: #000000;
     font-size: 16px;
 }
 
 .crypto-table td {
-    background-color: #1d1f24;
-    color: #d4d4d4;
+    background-color: #e664e1;
+    color: #ffffff;
 }
 
 .crypto-table tr:nth-child(even) td {
-    background-color: #23252b;
+    background-color: #e664e1;
 }
 
 /* Border antara baris */
@@ -294,7 +462,7 @@ main {
 .crypto-table tr:hover td {
     background-color: #27292e;
     color: #00ff99;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 /* Tambahan efek untuk kolom harga */
@@ -303,118 +471,16 @@ main {
     color: #00ff99;
 }
 
-/* Registrations */
-.content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    opacity: 0.7;
-}
-
-.content h2 {
-    color: #ffffff;
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    text-align: center;
-}
-
-/* Form Container */
-.form-container {
-    width: 50%;
-    background-color: rgba(231, 229, 235, 0.2);;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Form Group */
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-/* Submit Button */
-.form-group input[type="submit"] {
-    background-color: rgba(98, 57, 185, 0.2);
-    padding: 5px 8px;
-    width: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.form-group input[type="submit"]:hover {
-    background-color: rgba(239, 17, 239, 0.2);
-    color: #050605;
-    width: auto;
-    font-weight: 500;
-    transition: 0.5s;
-}
-
-/* Grup Radio */
-.radio-group {
-    display: flex;
-    text-align: center;
-    gap: 22px;
-}
-
-.radio-group label {
-    text-align: center;
-    margin-top: 6px;
-    margin-left: -10px;
-}
-
-/* Grup Checkbox */
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #4CAF50;
-}
-
-.checkbox-group label {
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-    font-weight: normal;
-}
 
 footer {
-    background-color: #333;
+    background-color: #9c8eac;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     bottom: 0;
-    width: 100%;
-}
-
-footer .contact {
-    margin: 10px 0;
+    height: auto;
+    width: auto;
 }
 
 footer a {
@@ -422,6 +488,220 @@ footer a {
     text-decoration: none;
 }
 
+/* Responsiveness for card layout */
+
+/* Tablet screen size */
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+        width: 115%;
+        height: auto;
+    }
+
+    .container,
+    .hero,
+    .services,
+    .form-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+            padding: 15px;
+        }
+
+    .logo {
+        font-size: 24px;
+        margin-left: 5rem;
+    }
+
+    header nav ul {
+        display: none;
+
+    }
+
+    
+    .hero {
+        height: 500px;
+        padding: 10px;
+    }
+
+    .home-info{
+        margin-left: 10rem;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+    }
+
+    .home-info p {
+        font-size: 12px;
+    }
+
+    .btn-scm{
+        font-size: 12px;
+    }
+
+    .btn-primary{
+        width: 9rem;
+    }
 
 
+    /* registration */
+    .form-container {
+        width: 90%; /* Lebar form disesuaikan untuk layar kecil */
+    }
 
+    .radio-group {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Kolom pertama untuk input, kedua untuk label */
+        gap: 10px;
+        align-items: center;
+
+    }
+
+    .radio-group input[type="radio"] {
+        justify-self: start;
+    }
+
+    .radio-group label {
+        justify-self: start;
+        font-size: 14px;
+        margin-left: 1rem;
+        color: #000000;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr 1fr; /* Satu kolom */
+        grid-template-rows: auto; /* Setiap card sebagai satu baris */
+    }
+
+    /* Mengatur ukuran dan posisi setiap card */
+    .card:nth-child(1),
+    .card:nth-child(2) {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card:nth-child(3) {
+        grid-column: 1 / span 2; /* Memperluas card ketiga agar memenuhi dua kolom */
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-bottom: 20px;
+    }
+
+    .card:nth-child(3) img{
+        height: 15rem;
+        width: auto;
+    }
+    .card {
+        width: 100%;
+    }
+
+    .image-info img {
+        height: 10rem;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+}
+
+/* CSS untuk layar 480px ke bawah */
+@media (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+        width: 125%;
+        height: auto;
+    }
+
+    .hero {
+        height: 500px;
+        background-size: cover;
+        background-position:center;
+    }
+
+    /* Pengaturan home-info agar berada di tengah */
+    .home-info {
+        margin-left: 10rem;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .home-info h1 {
+        font-size: 24px;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        width: auto; /* Sesuaikan lebar tombol dengan konten */
+        padding: 10px 20px;
+    }
+
+    /* registration */
+    .form-container {
+        width: 90%;
+    }
+
+    .radio-group {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Kolom pertama untuk input, kedua untuk label */
+        gap: 10px;
+        align-items: center;
+
+    }
+
+    .radio-group input[type="radio"] {
+        justify-self: start;
+    }
+
+    .radio-group label {
+        justify-self: start;
+        font-size: 14px;
+        margin-left: 1rem;
+        color: #000000;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr; /* Atur setiap card agar menumpuk ke bawah */
+        gap: 20px;
+    }
+
+    /* Mengatur card untuk layout satu kolom */
+    .card {
+        grid-template-columns: 1fr; /* Atur gambar dan teks agar bertumpuk */
+        grid-template-rows: auto auto; /* Setiap elemen dalam card dalam satu baris vertikal */
+        width: 100%;
+        padding: 5px;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3) {
+        grid-column: 1 / span 1; /* Masing-masing card memenuhi satu kolom */
+        height: auto;
+    }
+
+    .card:nth-child(3) img {
+        height: 10rem;
+        width: 100%;
+    }
+
+    .image-info img {
+        height: 8rem;
+    }
+}

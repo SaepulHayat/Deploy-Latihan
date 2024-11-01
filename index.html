@@ -5,6 +5,7 @@
     <!-- basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- site metas -->
     <title>Saepul Hayat</title>
     <meta name="keywords" content="blockchain, cryptocurrency, smart contracts, bitcoin">
@@ -28,46 +29,114 @@
         <!-- Logo -->
         <div class="logo">
             <a href="index.html">
-                <img src="images/Logo.png" alt="">
+                <img src="images/Logo.png" alt="logo">
                 <h1>aepul Hayat</h1>
             </a>
         </div>
         <!-- Navigations  -->
-        <nav>
+        <nav >
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#registration">REGISTRATION</a></li>
-                <li><a href="#services">SERVICE</a></li>
+                <li><a href="#services">SERVICES</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
+            <!-- <div class="burger_toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
         </nav>
     </header>
 
     
     <!-- Hero Section -->
-    <section class="hero"></section>
-    <section id="home" class="home">
-        <div class="home-info">
-            <h1>Saepul Hayat</h1>
-            <h2>I'm a Frontend Developer</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione iure culpa modi molestiae, repellat eos, eius vel soluta dignissimos sed porro veniam consectetur enim est, sit beatae quae! Nostrum, architecto!</p>
-            <div class="btn-scm">
-                <a href="#" class="btn-primary">Download CV</a>
-                <!-- add button link social media -->
-                <div class="scm">
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-youtube'></i></a>
+    <section class="hero">
+
+        <section id="home" class="home">
+            <div class="home-info">
+                <h1>Saepul Hayat</h1>
+                <h2>I'm a Frontend Developer</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione iure culpa modi molestiae, repellat eos, eius vel soluta dignissimos sed porro veniam consectetur enim est, sit beatae quae! Nostrum, architecto!</p>
+                <div class="btn-scm">
+                    <a href="#" class="btn-primary">Download CV</a>
+                    <!-- add button link social media -->
+                    <div class="scm">
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
                 </div>
+                <div class="profile"></div>
             </div>
-            <div class="profile"></div>
-        </div>
+        </section>
     </section>
     
     <main>
 
+    <!-- Registrations sections -->
+    <article " class="content">
+        <h2 id="registration">Registrasi</h2>
+        <div class="form-container">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Nama Lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Tanggal Lahir</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <select id="gender" name="gender">
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tulis pesan..."></textarea>
+                </div>
+    
+                <!-- Radio button untuk Status Pekerjaan -->
+                <div class="form-group">
+                    <label>Status Pekerjaan</label>
+                    <div class="radio-group">
+                        <input type="radio" id="pelajar" name="job_status" value="Pelajar">
+                        <label for="pelajar">Pelajar</label>
+                        <input type="radio" id="karyawan" name="job_status" value="Karyawan">
+                        <label for="karyawan">Karyawan</label>
+                        <input type="radio" id="pengusaha" name="job_status" value="Pengusaha">
+                        <label for="pengusaha">Pengusaha</label>
+                        <input type="radio" id="lainnya" name="job_status" value="Lainnya">
+                        <label for="lainnya">Lainnya</label>
+                    </div>
+                </div>
+    
+    
+                <!-- Checkbox Persetujuan -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms"> 
+                    <span class="txt-black">Saya menyetujui</span>
+                    <a href="#" target="_blank" class="link-syarat">syarat dan ketentuan</a>
+                    </label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" value="Kirim Formulir">
+                </div>
+            </form>
+        </div>
+    </article>
     <!-- Video Section -->
     <section id="about" class="video-section">
         <h2>Introduction</h2>
@@ -83,16 +152,21 @@
             <h2>Our Services</h2>
             <div class="service-cards">
                 <div class="card">
-                    <h3>Product Reviews</h3>
-                    <p>In-depth and unbiased reviews of the latest tech products in the market.</p>
+                    <h3>List Produk</h3>
+                    <div class="image-info"><img src="images/image-info.jpg" alt="Gambar"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta est ipsa veniam laborum magnam aut neque officiis error voluptatum in quaerat magni sunt aperiam unde itaque, quis incidunt ducimus iste..</p>
                 </div>
                 <div class="card">
-                    <h3>Tech News</h3>
-                    <p>Stay ahead of the curve with daily updates on the hottest tech trends.</p>
+                    <h3>Berita Teknologi</h3>
+                    <div class="image-info"><img src="images/image-info.jpg" alt="Gambar"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iste rem laudantium possimus ipsum, placeat totam suscipit molestiae esse ut sed et commodi, nulla omnis molestias quas dolorem officia odit!</p>
                 </div>
-                <div class="card">
-                    <h3>Gadget Comparisons</h3>
-                    <p>Find out which gadget is best suited to your needs through detailed comparisons.</p>
+                <div class="card card-last">
+                    <h3>Loker</h3>
+                    <div class="image-info"><img src="images/image-info.jpg" alt="Gambar"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime recusandae excepturi soluta molestias sequi voluptates reiciendis eum assumenda! Laborum qui nam voluptatibus deserunt quaerat minima ab non eaque excepturi rem.
+                    <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vero aliquam quia quo odio omnis illum! Veritatis ullam velit autem, quam illo laboriosam beatae ex aliquid, mollitia repellat quos labore.
+                    </p>
                 </div>
             </div>
         </div>
@@ -130,63 +204,6 @@
     </aside>
 
 
-<!-- Registrations sections -->
-<article " class="content">
-    <h2 id="registration">Registrasi</h2>
-    <div class="form-container">
-        <form action="" method="POST">
-            <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" name="name" placeholder="Nama Lengkap">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="dob">Tanggal Lahir</label>
-                <input type="date" id="dob" name="dob">
-            </div>
-            <div class="form-group">
-                <label for="gender">Jenis Kelamin</label>
-                <select id="gender" name="gender">
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Pesan</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tulis pesan..."></textarea>
-            </div>
-
-            <!-- Radio button untuk Status Pekerjaan -->
-            <div class="form-group">
-                <label>Status Pekerjaan</label>
-                <div class="radio-group">
-                    <input type="radio" id="pelajar" name="job_status" value="Pelajar">
-                    <label for="pelajar">Pelajar</label>
-                    <input type="radio" id="karyawan" name="job_status" value="Karyawan">
-                    <label for="karyawan">Karyawan</label>
-                    <input type="radio" id="pengusaha" name="job_status" value="Pengusaha">
-                    <label for="pengusaha">Pengusaha</label>
-                    <input type="radio" id="lainnya" name="job_status" value="Lainnya">
-                    <label for="lainnya">Lainnya</label>
-                </div>
-            </div>
-
-
-            <!-- Checkbox Persetujuan -->
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="terms" name="terms">
-                <label for="terms">Saya menyetujui syarat dan ketentuan</label>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Kirim Formulir">
-            </div>
-        </form>
-    </div>
-</article>
 
 
 </main>
@@ -199,5 +216,6 @@
     </section>
     <p>&copy; 2024 Adoy Zola. All rights reserved.</p>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>
